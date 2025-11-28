@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrapheneApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34c99b6ac736e9b2307944d373fcaffbc3f59c8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrapheneApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrapheneApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

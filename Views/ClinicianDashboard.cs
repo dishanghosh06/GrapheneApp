@@ -1,6 +1,7 @@
 using System;
 using GrapheneApp.Models;
 using GrapheneApp.Services;
+using GrapheneApp.Views;
 
 namespace GrapheneApp.Views
 {
@@ -22,9 +23,23 @@ namespace GrapheneApp.Views
                     Console.WriteLine($"{i + 1}. {clinician.Patients[i].Name} (ID: {clinician.Patients[i].ID})");
                 }
 
+                Console.WriteLine("\n0. Exit System");
                 Console.Write("\nEnter patient number: ");
-                if (!int.TryParse(Console.ReadLine(), out int patientChoice) ||
-                    patientChoice < 1 || patientChoice > clinician.Patients.Count)
+
+                if (!int.TryParse(Console.ReadLine(), out int patientChoice))
+                {
+                    Console.WriteLine("Invalid choice. Press ENTER to try again.");
+                    Console.ReadLine();
+                    continue;
+                }
+
+                if (patientChoice == 0)
+                {
+                    Console.WriteLine("\nExiting system... Goodbye!");
+                    Environment.Exit(0);
+                }
+
+                if (patientChoice < 1 || patientChoice > clinician.Patients.Count)
                 {
                     Console.WriteLine("Invalid choice. Press ENTER to try again.");
                     Console.ReadLine();
@@ -54,9 +69,20 @@ namespace GrapheneApp.Views
                     Console.WriteLine($"{i + 1}. Recording from {date}");
                 }
 
+                Console.WriteLine("\n0. Back to Patients");
                 Console.Write("\nSelect recording number: ");
-                if (!int.TryParse(Console.ReadLine(), out int fileChoice) ||
-                    fileChoice < 1 || fileChoice > patient.CsvFiles.Count)
+
+                if (!int.TryParse(Console.ReadLine(), out int fileChoice))
+                {
+                    Console.WriteLine("Invalid choice. Press ENTER to try again.");
+                    Console.ReadLine();
+                    continue;
+                }
+
+                if (fileChoice == 0)
+                    return;
+
+                if (fileChoice < 1 || fileChoice > patient.CsvFiles.Count)
                 {
                     Console.WriteLine("Invalid choice. Press ENTER to try again.");
                     Console.ReadLine();
@@ -78,6 +104,10 @@ namespace GrapheneApp.Views
                     Console.WriteLine($"Recording Date: {ExtractDateFromFile(selectedFile)}\n");
                     Console.WriteLine($"Peak Pressure Index: {peak}");
                     Console.WriteLine($"Contact Area: {contact:F2}%");
+
+                    // 🔥 ADDING THE HEATMAP BACK
+                    Console.WriteLine("\nHeatmap:\n");
+                    HeatMap.Print(grid);
                 }
                 catch (Exception ex)
                 {
@@ -95,11 +125,13 @@ namespace GrapheneApp.Views
         {
             string fileName = System.IO.Path.GetFileNameWithoutExtension(path);
             string[] parts = fileName.Split('_');
+
             if (parts.Length >= 2)
             {
                 string raw = parts[1];
                 return $"{raw.Substring(6, 2)}-{raw.Substring(4, 2)}-{raw.Substring(0, 4)}";
             }
+
             return "Unknown Date";
         }
     }
