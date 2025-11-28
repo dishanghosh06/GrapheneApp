@@ -1,0 +1,14 @@
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\GrapheneApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\GrapheneApp.AssemblyInfoInputs.cache
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\GrapheneApp.AssemblyInfo.cs
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\GrapheneApp.csproj.CoreCompileInputs.cache
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\bin\Debug\net9.0\GrapheneApp.exe
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\bin\Debug\net9.0\GrapheneApp.deps.json
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\bin\Debug\net9.0\GrapheneApp.runtimeconfig.json
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\bin\Debug\net9.0\GrapheneApp.dll
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\bin\Debug\net9.0\GrapheneApp.pdb
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\GrapheneApp.dll
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\refint\GrapheneApp.dll
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\GrapheneApp.pdb
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\GrapheneApp.genruntimeconfig.cache
+C:\Users\disha\OneDrive\Desktop\GrapheneApp\obj\Debug\net9.0\ref\GrapheneApp.dll
